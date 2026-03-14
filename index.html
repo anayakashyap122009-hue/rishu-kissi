@@ -28,7 +28,7 @@ animation:bgMove 8s infinite alternate;
 100%{background-position:100% 50%;}
 }
 
-/* KISS DROP */
+/* BIG KISS */
 .kiss{
 position:absolute;
 top:-200px;
@@ -51,26 +51,26 @@ transform:translateY(-50%) scale(1);
 }
 }
 
-/* Handwriting text */
+/* LOVE TEXT */
 .loveText{
 position:absolute;
-top:20%;
+top:18%;
 font-size:3rem;
 color:white;
 border-right:3px solid white;
 white-space:nowrap;
 overflow:hidden;
 width:0;
-animation:typing 3s steps(20,end) forwards;
+animation:typing 3s steps(25,end) forwards;
 animation-delay:2s;
 }
 
 @keyframes typing{
 from{width:0}
-to{width:320px}
+to{width:520px}
 }
 
-/* message */
+/* MESSAGE */
 .message{
 position:absolute;
 bottom:80px;
@@ -83,11 +83,17 @@ text-shadow:0 0 10px white;
 }
 
 @keyframes showText{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
-/* hearts rain */
+/* HEART RAIN */
 .heart{
 position:absolute;
 font-size:22px;
@@ -112,7 +118,9 @@ opacity:0;
 
 <div class="kiss">💋</div>
 
-<div class="loveText">Rishabh ❤️ Lakshita</div>
+<div class="loveText">
+Rishabh ❤️ Lakshita
+</div>
 
 <div class="message">
 A sweet kiss from Rishabh to Lakshita 💋 <br>
@@ -121,14 +129,19 @@ my betuu, my forever safe place 💖
 
 <script>
 
-/* hearts rain */
+/* HEART RAIN EFFECT */
 for(let i=0;i<40;i++){
+
 let heart=document.createElement("div");
 heart.className="heart";
 heart.innerHTML="💗";
+
 heart.style.left=Math.random()*100+"%";
 heart.style.animationDuration=(4+Math.random()*4)+"s";
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
 document.body.appendChild(heart);
+
 }
 
 </script>
